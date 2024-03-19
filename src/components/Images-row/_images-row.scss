@@ -1,0 +1,26 @@
+@import '../../assets/style/mixins';
+@import '../../assets/style/variables';
+
+.images-row-container {
+  @include displayFlexCenter(row);
+
+  .images-container {
+    @include displayFlexCenter(row);
+    max-width: $max-width;
+
+    img {
+      width: 25%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .images-row-container {
+    .images-container {
+      flex-wrap: wrap;
+      img {
+        width: 50%;
+      }
+    }
+  }
+}

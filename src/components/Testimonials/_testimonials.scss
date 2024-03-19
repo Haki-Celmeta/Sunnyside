@@ -1,0 +1,72 @@
+@import '../../assets/style/mixins';
+@import '../../assets/style/variables';
+
+.clients-testimonials-container {
+  @include displayFlexCenter(row);
+}
+
+.testimonials-container {
+  @include displayFlexCenter(column);
+  padding: 6rem 2rem;
+  max-width: $max-width;
+
+  h3 {
+    text-align: center;
+    font-family: 'Fraunces', sans-serif;
+    letter-spacing: 5px;
+    color: hsl(210, 4%, 67%);
+    text-transform: uppercase;
+    font-size: $h3;
+    font-weight: 700;
+    margin-bottom: 4rem;
+  }
+
+  .testimonials {
+    @include displayFlex(row);
+    justify-content: space-between;
+    gap: 2rem;
+    width: 80%;
+
+    .testimonial {
+      @include displayFlexCenter(column);
+      gap: 3rem;
+
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+      }
+
+      p {
+        text-align: center;
+        font-weight: 600;
+        color: hsl(213, 9%, 39%);
+        line-height: 2rem;
+      }
+
+      .profile-info {
+        @include displayFlexCenter(column);
+        div:first-child {
+          font-weight: 800;
+          font-size: 1.25rem;
+        }
+        div:last-child {
+          color: hsl(232, 10%, 55%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .testimonials-container {
+    .testimonials {
+      flex-direction: column;
+      gap: 4rem;
+
+      .testimonial {
+        gap: 2rem;
+      }
+    }
+  }
+}

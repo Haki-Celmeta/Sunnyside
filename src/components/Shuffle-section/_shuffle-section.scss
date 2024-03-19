@@ -1,0 +1,116 @@
+@import '../../assets/style/mixins';
+@import '../../assets/style/variables';
+
+.shuffle-section-container {
+  @include displayFlexCenter(column);
+
+  .shuffle-section {
+    @include displayFlex(row);
+    align-items: center;
+    gap: 2rem;
+    max-width: $max-width;
+    width: 100%;
+
+    .shuffle-info {
+      @include displayFlex(column);
+      padding: 0rem 6rem;
+      gap: 2rem;
+
+      h2 {
+        font-family: 'Fraunces', sans-serif;
+        font-size: $h2;
+        font-weight: 800;
+        color: hsl(212, 27%, 19%);
+      }
+
+      p {
+        line-height: 25px;
+        font-weight: 600;
+        color: hsl(232, 10%, 55%);
+      }
+
+      a {
+        @include displayFlexCenter(column);
+        text-transform: uppercase;
+        color: black;
+        text-decoration: none;
+        font-weight: 800;
+        letter-spacing: 3px;
+        width: fit-content;
+
+        div:first-child {
+          font-family: 'Fraunces', sans-serif;
+          z-index: 9;
+        }
+
+        div:last-child {
+          opacity: 0;
+          width: 160px;
+          height: 10px;
+          background-color: $yellow-color;
+          border-radius: 8px;
+          margin-top: -10px;
+          transition: 0.3s;
+        }
+      }
+
+      a:hover {
+        div:last-child {
+          opacity: 1;
+        }
+      }
+    }
+
+    img {
+      width: 50%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .second-shuffle {
+    .shuffle-info {
+      a {
+        div:last-child {
+          background-color: $soft-red-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .shuffle-section-container {
+    .shuffle-section {
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+
+      .shuffle-info {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .first-shuffle {
+      img {
+        order: 0;
+      }
+
+      .shuffle-info {
+        order: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .shuffle-section-container {
+    .shuffle-section {
+      .shuffle-info {
+        padding: 0rem 2rem;
+      }
+    }
+  }
+}

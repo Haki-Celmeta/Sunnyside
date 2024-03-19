@@ -1,6 +1,56 @@
-// Primary colors
-$soft-red-color: hsl(7, 99%, 70%);
-$yellow-color: hsl(51, 100%, 49%);
-$dark-cyan-color: hsl(167, 40%, 24%);
-$dark-blue-color: hsl(198, 62%, 26%);
-$moderate-cyan-color: hsl(168, 34%, 41%);
+@import '../../assets/style/mixins';
+@import '../../assets/style/variables';
+
+.navbar-container {
+  @include displayFlex(row);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 3rem;
+  background-color: $sky-color;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  .title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 0.5rem 0rem;
+  }
+
+  nav {
+    ul {
+      @include displayFlex(row);
+      gap: 1rem;
+      list-style-type: none;
+
+      li {
+        button {
+          color: #fff;
+          padding: 0.5rem 1rem;
+          border-radius: 32px;
+          cursor: pointer;
+          transition: 0.2s;
+        }
+        button:hover {
+          background-color: hsla(0, 0%, 100%, 0.2);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-container {
+    nav {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar-container {
+    padding: 0.75rem 1rem;
+  }
+}
