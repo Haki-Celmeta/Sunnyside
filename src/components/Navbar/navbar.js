@@ -36,15 +36,11 @@ const Navbar = () => {
   }, []);
 
   const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box sx={{ width: 250}} role="presentation" onClick={toggleDrawer(false)}>
       <List>
         {['Home', 'Services', 'Project', 'Contact'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-               {index === 0 && <HomeOutlinedIcon />}
-               {index === 1 && <PublicOutlinedIcon />}
-               {index === 2 && <RocketLaunchOutlinedIcon />}
-               {index === 3 && <EmailOutlinedIcon />}
               <ListItemText primary={text} sx={{paddingLeft: '1rem'}}/>
             </ListItemButton>
           </ListItem>
@@ -68,7 +64,7 @@ const Navbar = () => {
         <Button sx={{color: '#fff', display: screenWidth <= 600 ? 'flex' : 'none'}} onClick={toggleDrawer(true)}>
           <MenuOutlinedIcon fontSize='large'/>
         </Button>
-        <Drawer open={open} onClose={toggleDrawer(false)}>
+        <Drawer sx={{'.css-4t3x6l-MuiPaper-root-MuiDrawer-paper': {backgroundColor: 'hsl(200, 100%, 62%)', color: 'white'}}} open={open} onClose={toggleDrawer(false)}>
           {DrawerList}
         </Drawer>
       </div>
