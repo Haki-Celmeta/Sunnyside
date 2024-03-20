@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Sunnyside/static/css/main.bed8dbde.css",
+    "main.js": "/Sunnyside/static/js/main.b156bcaf.js",
+    "static/media/image-header.jpg": "/Sunnyside/static/media/image-header.49b52ffa54752cb7c2d0.jpg",
+    "static/media/image-gallery-milkbottles.jpg": "/Sunnyside/static/media/image-gallery-milkbottles.df1d9d8460e873924250.jpg",
+    "static/media/image-gallery-sugarcubes.jpg": "/Sunnyside/static/media/image-gallery-sugarcubes.09b72f4fbfbf08579f9d.jpg",
+    "static/media/image-gallery-orange.jpg": "/Sunnyside/static/media/image-gallery-orange.49f4212bc650862672a7.jpg",
+    "static/media/image-gallery-cone.jpg": "/Sunnyside/static/media/image-gallery-cone.461ff4214c3ac822dfff.jpg",
+    "static/media/image-graphic-design.jpg": "/Sunnyside/static/media/image-graphic-design.7ac8bdf0d3df29591a3b.jpg",
+    "static/media/image-photography.jpg": "/Sunnyside/static/media/image-photography.104cf40b52f66520afb0.jpg",
+    "static/media/pinterest.svg": "/Sunnyside/static/media/pinterest.e8539896222ddd4382a5228e569f46a3.svg",
+    "static/media/instagram.svg": "/Sunnyside/static/media/instagram.a64c1acc6aa1c146ffeb8d970d27286b.svg",
+    "static/media/facebook.svg": "/Sunnyside/static/media/facebook.b36874f3bcdb2edaa692a704d3ece2fe.svg",
+    "index.html": "/Sunnyside/index.html",
+    "static/media/arrow.svg": "/Sunnyside/static/media/arrow.16a83f08db919f758d20cc6ac0d6fde8.svg",
+    "main.bed8dbde.css.map": "/Sunnyside/static/css/main.bed8dbde.css.map",
+    "main.b156bcaf.js.map": "/Sunnyside/static/js/main.b156bcaf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bed8dbde.css",
+    "static/js/main.b156bcaf.js"
+  ]
+}
